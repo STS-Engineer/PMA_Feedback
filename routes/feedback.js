@@ -92,7 +92,7 @@ if (employeeCheck.rows.length === 0) {
   priority_improvement,
   overall_satisfaction,
   recommendation,
-
+   continue_expansion,
   final_comments
 
 )
@@ -108,7 +108,7 @@ if (employeeCheck.rows.length === 0) {
   $22,$23,$24,$25,$26,
   $27,$28,$29,
   $30,$31,$32,
-  $33
+  $33,$34
 
 )
 
@@ -116,7 +116,7 @@ if (employeeCheck.rows.length === 0) {
     `;
 
     // ─────────────────────────────────────────────────────────
-    // MAPPING FRONTEND → DATABASE
+    // MAPPING FRONTEND → DATABASE vk////////
     // ─────────────────────────────────────────────────────────
 
 const values = [
@@ -134,41 +134,41 @@ const values = [
   d.accessibility_remarks || null,
 
   // SECTION 2
-  d.understands_needs || null,
+  d.understand_need || null,
   d.relevant_work || null,
-  d.answer_quality_rating || null,
+  d.answer_quality || null,
   d.discussion_levels || null,
-  d.test_frequency || null,
+  d.test_count || null,
 
   d.detail_level || null,
   d.usage_frequency || null,
-  d.management_coach_level || null,
+  d.coach_level || null,
 
   d.email_help || null,
   d.email_quality || null,
 
   d.email_concise || null,
   d.email_tone || null,
-  d.collaboration_comments || null,
+  d.collaboration_comment || null,
 
   // SECTION 3
-  d.training_tested || null,
+  d.training_test || null,
   d.training_helpful || null,
 
-  d.checked_expectations || null,
-  d.aligned_expectations || null,
+  d.group_expectations || null,
+  d.alignment || null,
 
-  d.training_comments || null,
+  d.training_comment || null,
 
   // SECTION 4
-  d.higher_level_help || null,
-  d.additional_functions || [],
-  d.other_function || null,
+  d.higher_level || null,
+  d.new_features || [],
+  d.other_feature || null,
 
   d.priority_improvement || null,
   d.overall_satisfaction || null,
   d.recommendation || null,
-
+  d.recommendation || null,
   d.final_comments || null
 
 ];
