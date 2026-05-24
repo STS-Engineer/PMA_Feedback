@@ -6,7 +6,7 @@ require('dotenv').config();
 // =========================================
 
 
-const pool = new Pool({
+const feedbackPool = new Pool({
   host: process.env.DB2_HOST,
   port: Number(process.env.DB2_PORT || 5432),
   database: process.env.DB2_NAME,
