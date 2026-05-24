@@ -5,7 +5,6 @@ require('dotenv').config();
 // DATABASE 1 → FEEDBACK
 // =========================================
 
-const { Pool } = require('pg');
 
 const pool = new Pool({
   host: process.env.DB2_HOST,
