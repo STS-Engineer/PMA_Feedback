@@ -5,14 +5,15 @@ require('dotenv').config();
 // DATABASE 1 → FEEDBACK
 // =========================================
 
-const feedbackPool = new Pool({
+const { Pool } = require('pg');
 
-  host: process.env.DB1_HOST,
-  port: process.env.DB1_PORT,
-  database: process.env.DB1_NAME,
-  user: process.env.DB1_USER,
-  password: process.env.DB1_PASSWORD,
-
+const pool = new Pool({
+  host: process.env.DB2_HOST,
+  port: Number(process.env.DB2_PORT || 5432),
+  database: process.env.DB2_NAME,
+  user: process.env.DB2_USER,
+  password: process.env.DB2_PASSWORD,
+  ssl: { rejectUnauthorized: false }
 });
 
 // =========================================
